@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/imgbtn_dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:onClick="onClick"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgbtn_dialog_close"
+            android:layout_margin="40dp"
+            android:gravity="center"
+            android:text="TITLE"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/title_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_dialog_title"
+            android:background="@android:color/darker_gray"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_dialog_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_line"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:text="MSG"
+            android:textColor="#555555"
+            android:textSize="15dp"
+            android:typeface="monospace" />
+
+        <CheckBox
+            android:id="@+id/checkbox_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/tv_dialog_msg"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:text="로그아웃 시 앱 종료"
+            android:textColor="#555555"
+            android:textSize="15dp"
+            android:typeface="monospace"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linear_button_area"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/checkbox_dialog"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_dialog_negative"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="취소"
+                android:textSize="18dp"
+                android:typeface="monospace" />
+
+            <View
+                android:id="@+id/left_margin"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/btn_dialog_neutral"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="확인"
+                android:textSize="18dp"
+                android:typeface="monospace" />
+
+            <View
+                android:id="@+id/right_margin"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/btn_dialog_positive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="확인"
+                android:textSize="18dp"
+                android:typeface="monospace" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
