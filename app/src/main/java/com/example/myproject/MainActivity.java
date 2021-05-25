@@ -16,5 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
         //  공통 팝업 호출
         startActivity(new Intent(this, DialogTestActivity.class));
+
     }
 }
